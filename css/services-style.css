@@ -18,22 +18,6 @@
     animation: float 15s ease-in-out infinite;
 }
 
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-
-    33% {
-        transform: translate(30px, -30px) rotate(120deg);
-    }
-
-    66% {
-        transform: translate(-20px, 20px) rotate(240deg);
-    }
-}
-
 .services-hero-content {
     position: relative;
     z-index: 1;
@@ -48,18 +32,6 @@
     margin-bottom: var(--spacing-md);
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     animation: slideInUp 1s ease-out;
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .services-hero p {
@@ -284,20 +256,6 @@
     animation: pulse 3s ease-in-out infinite;
 }
 
-@keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 0.9;
-    }
-
-    50% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-}
-
 .service-cta {
     background: white;
     padding: var(--spacing-lg);
@@ -411,8 +369,6 @@
     margin-bottom: var(--spacing-lg);
 }
 
-
-
 .faq-section {
     background: var(--background-light);
     padding: var(--spacing-3xl) 0;
@@ -480,6 +436,82 @@
     padding: 0 var(--spacing-lg) var(--spacing-lg);
     color: var(--text-secondary);
     line-height: 1.6;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.user-is-tabbing *:focus {
+    outline: 2px solid var(--secondary-color) !important;
+    outline-offset: 2px !important;
+}
+
+.services-nav-item.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.services-nav-item.active .services-nav-link {
+    color: white;
+}
+
+.services-nav-item.active .services-nav-link i {
+    color: var(--accent-color);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    33% {
+        transform: translate(30px, -30px) rotate(120deg);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) rotate(240deg);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -551,40 +583,6 @@
     .faq-icon {
         animation: none;
     }
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--background-light);
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-}
-
-.user-is-tabbing *:focus {
-    outline: 2px solid var(--secondary-color) !important;
-    outline-offset: 2px !important;
-}
-
-.services-nav-item.active {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-}
-
-.services-nav-item.active .services-nav-link {
-    color: white;
-}
-
-.services-nav-item.active .services-nav-link i {
-    color: var(--accent-color);
 }
 
 @media print {
