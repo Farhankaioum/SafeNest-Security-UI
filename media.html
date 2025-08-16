@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - SafeNest Security</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
     <header class="header">
         <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
-                <div class="logo">
-                    <img src="images/safenest-logo.svg" alt="SafeNest Security Logo" class="logo-img">
+                <a href="index.html" class="logo">
+                    <img src="resources/images/safenest-logo.png" alt="SafeNest Security Logo" class="logo-img">
                     <h1 class="logo-text">SafeNest Security</h1>
-                </div>
+                </a>
                 <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -24,16 +29,13 @@
                 </button>
                 <ul class="nav-menu" role="menubar">
                     <li class="nav-item" role="none">
-                        <a href="index.html" class="nav-link" role="menuitem">Home</a>
+                        <a href="index.html" class="nav-link active" role="menuitem" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item" role="none">
                         <a href="services.html" class="nav-link" role="menuitem">Services</a>
                     </li>
                     <li class="nav-item" role="none">
-                        <a href="products.html" class="nav-link" role="menuitem">Products</a>
-                    </li>
-                    <li class="nav-item" role="none">
-                        <a href="media.html" class="nav-link active" role="menuitem" aria-current="page">Gallery</a>
+                        <a href="media.html" class="nav-link" role="menuitem">Gallery</a>
                     </li>
                     <li class="nav-item" role="none">
                         <a href="about.html" class="nav-link" role="menuitem">About</a>
@@ -46,305 +48,171 @@
         </nav>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="page-hero media-hero" aria-labelledby="media-hero-title">
-            <div class="container">
-                <h1 id="media-hero-title" class="page-hero-title">Our Work Gallery</h1>
-                <p class="page-hero-description">
-                    Explore our portfolio of successful security installations and see how we've helped protect homes across Australia.
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Our Work Gallery</h1>
+                <p class="page-description">
+                    Explore our portfolio of successful security installations and see how we've helped protect homes
+                    across Australia.
                 </p>
             </div>
-        </section>
 
-        <!-- Gallery Navigation -->
-        <section class="gallery-nav" aria-labelledby="gallery-nav-title">
-            <div class="container">
-                <h2 id="gallery-nav-title" class="sr-only">Gallery Categories</h2>
-                <div class="gallery-filters">
-                    <button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
-                    <button class="filter-btn" data-filter="smart-locks" aria-pressed="false">Smart Locks</button>
-                    <button class="filter-btn" data-filter="surveillance" aria-pressed="false">Surveillance</button>
-                    <button class="filter-btn" data-filter="installations" aria-pressed="false">Installations</button>
-                    <button class="filter-btn" data-filter="commercial" aria-pressed="false">Commercial</button>
-                </div>
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="smart-locks">Smart Locks</button>
+                <button class="filter-btn" data-filter="surveillance">Surveillance</button>
+                <button class="filter-btn" data-filter="installations">Installations</button>
+                <button class="filter-btn" data-filter="before-after">Before & After</button>
             </div>
-        </section>
 
-        <!-- Main Gallery -->
-        <section class="gallery-section" aria-labelledby="gallery-title">
-            <div class="container">
-                <h2 id="gallery-title" class="section-title">Project Gallery</h2>
-                <div class="gallery-grid" role="grid" aria-label="Security installation projects">
-                    
-                    <!-- Smart Lock Projects -->
-                    <div class="gallery-item" data-category="smart-locks" role="gridcell">
-                        <div class="thumbnail" data-full="images/smart-lock-install-1-full.jpg" data-caption="Modern smart lock installation on Victorian home entrance" tabindex="0" role="button" aria-label="View full image: Modern smart lock installation">
-                            <img src="images/smart-lock-install-1-thumb.jpg" alt="Modern smart lock with fingerprint scanner installed on wooden front door" loading="lazy">
-                            <div class="thumbnail-overlay">
-                                <div class="overlay-content">
-                                    <h3 class="overlay-title">Premium Smart Lock</h3>
-                                    <p class="overlay-description">Fingerprint & PIN access system</p>
-                                    <span class="overlay-icon" aria-hidden="true">🔍</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-category="smart-locks" role="gridcell">
-                        <div class="thumbnail" data-full="images/smart-lock-install-2-full.jpg" data-caption="Smart deadbolt with mobile app integration" tabindex="0" role="button" aria-label="View full image: Smart deadbolt installation">
-                            <img src="images/smart-lock-install-2-thumb.jpg" alt="Smart deadbolt with LED status indicator on modern apartment door" loading="lazy">
-                            <div class="thumbnail-overlay">
-                                <div class="overlay-content">
-                                    <h3 class="overlay-title">Smart Deadbolt</h3>
-                                    <p class="overlay-description">App-controlled with LED indicators</p>
-                                    <span class="overlay-icon" aria-hidden="true">🔍</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Surveillance Projects -->
-                    <div class="gallery-item" data-category="surveillance" role="gridcell">
-                        <div class="thumbnail" data-full="images/surveillance-install-1-full.jpg" data-caption="4K surveillance camera system with night vision capability" tabindex="0" role="button" aria-label="View full image: 4K surveillance system">
-                            <img src="images/surveillance-install-1-thumb.jpg" alt="Professional 4K security camera mounted under house eave overlooking driveway" loading="lazy">
-                            <div class="thumbnail-overlay">
-                                <div class="overlay-content">
-                                    <h3 class="overlay-title">4K Surveillance System</h3>
-                                    <p class="overlay-description">Night vision & motion detection</p>
-                                    <span class="overlay-icon" aria-hidden="true">🔍</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-category="surveillance" role="gridcell">
-                        <div class="thumbnail" data-full="images/surveillance-install-2-full.jpg" data-caption="Multi-camera surveillance setup covering entire property perimeter" tabindex="0" role="button" aria-label="View full image: Multi-camera surveillance system">
-                            <img src="images/surveillance-install-2-thumb.jpg" alt="Multiple security cameras positioned strategically around residential property" loading="lazy">
-                            <div class="thumbnail-overlay">
-                                <div class="overlay-content">
-                                    <h3 class="overlay-title">Complete Coverage</h3>
-                                    <p class="overlay-description">8-camera perimeter system</p>
-                                    <span class="overlay-icon" aria-hidden="true">🔍</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Installation Projects -->
-                    <div class="gallery-item" data-category="installations" role="gridcell">
-                        <div class="thumbnail" data-full="images/installation-process-1-full.jpg" data-caption="Professional technician installing smart home security hub" tabindex="0" role="button" aria-label="View full image: Security hub installation">
-                            <img src="images/installation-process-1-thumb.jpg" alt="SafeNest technician installing security system control panel in home utility room" loading="lazy">
-                            <div class="thumbnail-overlay">
-                                <div class="overlay-content">
-                                    <h3 class="overlay-title">Professional Installation</h3>
-                                    <p class="overlay-description">Certified technician at work</p>
-                                    <span class="overlay-icon" aria-hidden="true">🔍</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-category="installations" role="gridcell">
-                        <div class="thumbnail" data-full="images/installation-process-2-full.jpg" data-caption="Wiring and setup of integrated security system components" tabindex="0" role="button" aria-label="View full image: System wiring installation">
-                            <img src="images/installation-process-2-thumb.jpg" alt="Clean professional wiring installation for integrated security system" loading="lazy">
-                            <div class="thumbnail-overlay">
-                                <div class="overlay-content">
-                                    <h3 class="overlay-title">Clean Installation</h3>
-                                    <p class="overlay-description">Professional wiring & setup</p>
-                                    <span class="overlay-icon" aria-hidden="true">🔍</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Commercial Projects -->
-                    <div class="gallery-item" data-category="commercial" role="gridcell">
-                        <div class="thumbnail" data-full="images/commercial-install-1-full.jpg" data-caption="Advanced access control system for office building entrance" tabindex="0" role="button" aria-label="View full image: Commercial access control">
-                            <img src="images/commercial-install-1-thumb.jpg" alt="Modern office building entrance with card reader and biometric access control system" loading="lazy">
-                            <div class="thumbnail-overlay">
-                                <div class="overlay-content">
-                                    <h3 class="overlay-title">Office Access Control</h3>
-                                    <p class="overlay-description">Card reader & biometric system</p>
-                                    <span class="overlay-icon" aria-hidden="true">🔍</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-category="commercial" role="gridcell">
-                        <div class="thumbnail" data-full="images/commercial-install-2-full.jpg" data-caption="Comprehensive surveillance network for retail establishment" tabindex="0" role="button" aria-label="View full image: Retail surveillance system">
-                            <img src="images/commercial-install-2-thumb.jpg" alt="Multiple surveillance cameras monitoring retail store interior and exterior" loading="lazy">
-                            <div class="thumbnail-overlay">
-                                <div class="overlay-content">
-                                    <h3 class="overlay-title">Retail Security</h3>
-                                    <p class="overlay-description">16-camera surveillance network</p>
-                                    <span class="overlay-icon" aria-hidden="true">🔍</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Additional Gallery Items -->
-                    <div class="gallery-item" data-category="smart-locks" role="gridcell">
-                        <div class="thumbnail" data-full="images/smart-lock-install-3-full.jpg" data-caption="Keyless entry system with backup key override" tabindex="0" role="button" aria-label="View full image: Keyless entry system">
-                            <img src="images/smart-lock-install-3-thumb.jpg" alt="Sleek keyless entry system installed on contemporary home entrance" loading="lazy">
-                            <div class="thumbnail-overlay">
-                                <div class="overlay-content">
-                                    <h3 class="overlay-title">Keyless Entry</h3>
-                                    <p class="overlay-description">Touch screen with backup key</p>
-                                    <span class="overlay-icon" aria-hidden="true">🔍</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item" data-category="surveillance" role="gridcell">
-                        <div class="thumbnail" data-full="images/surveillance-install-3-full.jpg" data-caption="Discreet dome cameras providing comprehensive indoor monitoring" tabindex="0" role="button" aria-label="View full image: Indoor dome cameras">
-                            <img src="images/surveillance-install-3-thumb.jpg" alt="Dome security cameras discretely mounted on ceiling providing indoor coverage" loading="lazy">
-                            <div class="thumbnail-overlay">
-                                <div class="overlay-content">
-                                    <h3 class="overlay-title">Indoor Monitoring</h3>
-                                    <p class="overlay-description">Discreet dome cameras</p>
-                                    <span class="overlay-icon" aria-hidden="true">🔍</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Video Section -->
-        <section class="video-section" aria-labelledby="video-title">
-            <div class="container">
-                <h2 id="video-title" class="section-title">Installation Process Video</h2>
-                <div class="video-wrapper">
-                    <div class="video-container">
-                        <video controls poster="images/video-poster.jpg" aria-describedby="video-description">
-                            <source src="videos/installation-process.mp4" type="video/mp4">
-                            <source src="videos/installation-process.webm" type="video/webm">
-                            <track kind="captions" src="videos/installation-captions.vtt" srclang="en" label="English">
-                            Your browser does not support the video tag. Please <a href="videos/installation-process.mp4">download the video</a> to watch it.
-                        </video>
-                        <div class="video-play-btn" aria-label="Play installation process video">
-                            <span class="play-icon">▶</span>
-                        </div>
-                    </div>
-                    <div class="video-info">
-                        <h3>Professional Installation Process</h3>
-                        <p id="video-description">Watch our certified technicians perform a complete smart lock and surveillance system installation from start to finish. This 5-minute video showcases our professional approach and attention to detail.</p>
-                        <div class="video-stats">
-                            <span class="video-duration">Duration: 5:23</span>
-                            <span class="video-quality">Quality: HD 1080p</span>
-                        </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Smart Locks Section -->
+                <div class="gallery-item" data-category="smart-locks">
+                    <img src="resources/images/smart_lock.jpg"
+                        alt="Modern Smart Lock Installation" class="gallery-image">
+                    <div class="gallery-info">
+                        <div class="gallery-category">Smart Locks</div>
+                        <h3 class="gallery-title">Premium Smart Lock System</h3>
+                        <p class="gallery-description">Biometric access control with mobile app integration for a modern
+                            Sydney home.</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Audio Testimonials -->
-        <section class="audio-section" aria-labelledby="audio-title">
-            <div class="container">
-                <h2 id="audio-title" class="section-title">Customer Testimonials</h2>
-                <div class="audio-testimonials">
-                    <div class="audio-testimonial">
-                        <div class="audio-player">
-                            <audio controls aria-describedby="audio-1-description">
-                                <source src="audio/testimonial-sarah-melbourne.mp3" type="audio/mpeg">
-                                <source src="audio/testimonial-sarah-melbourne.ogg" type="audio/ogg">
-                                Your browser does not support the audio element. <a href="audio/testimonial-sarah-melbourne.mp3">Download the audio file</a>.
-                            </audio>
-                        </div>
-                        <div class="audio-info">
-                            <h3>Sarah Thompson, Melbourne</h3>
-                            <p id="audio-1-description">"The installation was seamless and the team was incredibly professional. I feel so much safer now with my new smart lock system."</p>
-                            <div class="testimonial-rating" aria-label="5 out of 5 stars">
-                                ⭐⭐⭐⭐⭐
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="audio-testimonial">
-                        <div class="audio-player">
-                            <audio controls aria-describedby="audio-2-description">
-                                <source src="audio/testimonial-mike-sydney.mp3" type="audio/mpeg">
-                                <source src="audio/testimonial-mike-sydney.ogg" type="audio/ogg">
-                                Your browser does not support the audio element. <a href="audio/testimonial-mike-sydney.mp3">Download the audio file</a>.
-                            </audio>
-                        </div>
-                        <div class="audio-info">
-                            <h3>Mike Chen, Sydney</h3>
-                            <p id="audio-2-description">"The surveillance system has given me complete peace of mind. The mobile app is fantastic and the 24/7 monitoring service is worth every penny."</p>
-                            <div class="testimonial-rating" aria-label="5 out of 5 stars">
-                                ⭐⭐⭐⭐⭐
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="audio-testimonial">
-                        <div class="audio-player">
-                            <audio controls aria-describedby="audio-3-description">
-                                <source src="audio/testimonial-lisa-brisbane.mp3" type="audio/mpeg">
-                                <source src="audio/testimonial-lisa-brisbane.ogg" type="audio/ogg">
-                                Your browser does not support the audio element. <a href="audio/testimonial-lisa-brisbane.mp3">Download the audio file</a>.
-                            </audio>
-                        </div>
-                        <div class="audio-info">
-                            <h3>Lisa Rodriguez, Brisbane</h3>
-                            <p id="audio-3-description">"Outstanding service from consultation to installation. The team explained everything clearly and the system works perfectly. Highly recommended!"</p>
-                            <div class="testimonial-rating" aria-label="5 out of 5 stars">
-                                ⭐⭐⭐⭐⭐
-                            </div>
-                        </div>
+                <div class="gallery-item" data-category="smart-locks">
+                    <img src="resources/images/keypad_lock.jpg"
+                        alt="Keypad Smart Lock" class="gallery-image">
+                    <div class="gallery-info">
+                        <div class="gallery-category">Smart Locks</div>
+                        <h3 class="gallery-title">Keypad Entry System</h3>
+                        <p class="gallery-description">Advanced keypad lock with backup key access for enhanced
+                            security.</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- CTA Section -->
-        <section class="cta media-cta" aria-labelledby="media-cta-title">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 id="media-cta-title" class="cta-title">Ready to Get Started?</h2>
-                    <p class="cta-description">
-                        Inspired by our work? Contact us today to discuss your security needs and join our gallery of satisfied customers.
-                    </p>
-                    <div class="cta-actions">
-                        <a href="contact.html" class="btn btn-primary btn-large">Get Your Quote</a>
-                        <a href="services.html" class="btn btn-secondary btn-large">View Our Services</a>
+                <!-- Surveillance Section -->
+                <div class="gallery-item" data-category="surveillance">
+                    <img src="resources/images/sur_2.avif"
+                        alt="Security Camera Installation" class="gallery-image">
+                    <div class="gallery-info">
+                        <div class="gallery-category">Surveillance</div>
+                        <h3 class="gallery-title">Complete Surveillance Setup</h3>
+                        <p class="gallery-description">4K security cameras with night vision and motion detection
+                            capabilities.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <!-- Image Modal -->
-    <div id="imageModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true" tabindex="-1">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modal-title" class="modal-title">Image Viewer</h2>
-                <button class="modal-close" aria-label="Close image viewer">&times;</button>
-            </div>
-            <div class="modal-body">
-                <img id="modalImage" src="" alt="" class="modal-image">
-                <p class="modal-caption" id="modal-caption"></p>
-            </div>
-            <div class="modal-navigation">
-                <button class="modal-prev" aria-label="Previous image">&#8249;</button>
-                <button class="modal-next" aria-label="Next image">&#8250;</button>
+                <div class="gallery-item" data-category="surveillance">
+                    <img src="resources/images/sur1.jpg"
+                        alt="Monitoring System" class="gallery-image">
+                    <div class="gallery-info">
+                        <div class="gallery-category">Surveillance</div>
+                        <h3 class="gallery-title">Central Monitoring Hub</h3>
+                        <p class="gallery-description">Professional monitoring station with real-time alerts and cloud
+                            storage.</p>
+                    </div>
+                </div>
+
+                <!-- Installations Section -->
+                <div class="gallery-item" data-category="installations">
+                    <img src="resources/images/install_1.jpg"
+                        alt="Home Security Installation" class="gallery-image">
+                    <div class="gallery-info">
+                        <div class="gallery-category">Installations</div>
+                        <h3 class="gallery-title">Comprehensive Home Security</h3>
+                        <p class="gallery-description">Full home security system installation including sensors and
+                            control panel.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="installations">
+                    <img src="resources/images/outdoor.jpg"
+                        alt="Security Panel Installation" class="gallery-image">
+                    <div class="gallery-info">
+                        <div class="gallery-category">Installations</div>
+                        <h3 class="gallery-title">Control Panel Setup</h3>
+                        <p class="gallery-description">Smart security control panel with touchscreen interface and
+                            mobile connectivity.</p>
+                    </div>
+                </div>
+
+                <!-- Before and After Section -->
+                <div class="gallery-item" data-category="before-after">
+                    <img src="resources/images/before_after_2.jpg"
+                        alt="Security Upgrade Before/After" class="gallery-image">
+                    <div class="gallery-info">
+                        <div class="gallery-category">Before & After</div>
+                        <h3 class="gallery-title">Melbourne Home Transformation</h3>
+                        <p class="gallery-description">Complete security upgrade from basic locks to smart home security
+                            system.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="before-after">
+                    <img src="resources/images/before_after_1.jpg"
+                        alt="Door Security Upgrade" class="gallery-image">
+                    <div class="gallery-info">
+                        <div class="gallery-category">Before & After</div>
+                        <h3 class="gallery-title">Front Door Security Enhancement</h3>
+                        <p class="gallery-description">Traditional lock replacement with advanced smart lock technology.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="smart-locks">
+                    <img src="resources/images/finterprint_lock.jpg"
+                        alt="Smart Lock Detail" class="gallery-image">
+                    <div class="gallery-info">
+                        <div class="gallery-category">Smart Locks</div>
+                        <h3 class="gallery-title">Fingerprint Access Lock</h3>
+                        <p class="gallery-description">High-security fingerprint recognition system with backup access
+                            methods.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="surveillance">
+                    <img src="resources/images/outdoor.jpg"
+                        alt="Outdoor Camera System" class="gallery-image">
+                    <div class="gallery-info">
+                        <div class="gallery-category">Surveillance</div>
+                        <h3 class="gallery-title">Outdoor Security Network</h3>
+                        <p class="gallery-description">Weather-resistant camera system covering all exterior access
+                            points.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="installations">
+                    <img src="resources/images/property_2.jpg"
+                        alt="Integration Setup" class="gallery-image">
+                    <div class="gallery-info">
+                        <div class="gallery-category">Installations</div>
+                        <h3 class="gallery-title">Smart Home Integration</h3>
+                        <p class="gallery-description">Security system integration with existing smart home automation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="before-after">
+                    <img src="resources/images/property_transformation.jpg"
+                        alt="Property Transformation" class="gallery-image">
+                    <div class="gallery-info">
+                        <div class="gallery-category">Before & After</div>
+                        <h3 class="gallery-title">Brisbane Property Makeover</h3>
+                        <p class="gallery-description">Complete property security transformation with modern
+                            surveillance and access control.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="modal-backdrop" aria-hidden="true"></div>
-    </div>
+    </main>
 
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="images/safenest-logo-white.svg" alt="SafeNest Security Logo" class="footer-logo-img">
+                        <img src="resources/images/safenest-logo.png" alt="SafeNest Security Logo"
+                            class="footer-logo-img">
                         <h3 class="footer-logo-text">SafeNest Security</h3>
                     </div>
                     <p class="footer-description">
@@ -352,20 +220,20 @@
                     </p>
                     <div class="social-links" aria-label="Follow us on social media">
                         <a href="#" class="social-link" aria-label="Follow us on Facebook">
-                            <img src="images/facebook-icon.svg" alt="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
                         </a>
                         <a href="#" class="social-link" aria-label="Follow us on Twitter">
-                            <img src="images/twitter-icon.svg" alt="Twitter">
+                            <i class="fa-brands fa-twitter"></i>
                         </a>
                         <a href="#" class="social-link" aria-label="Follow us on LinkedIn">
-                            <img src="images/linkedin-icon.svg" alt="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
                         </a>
                         <a href="#" class="social-link" aria-label="Follow us on Instagram">
-                            <img src="images/instagram-icon.svg" alt="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-heading">Services</h4>
                     <ul class="footer-links">
@@ -375,7 +243,7 @@
                         <li><a href="services.html#monitoring">24/7 Monitoring</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-heading">Company</h4>
                     <ul class="footer-links">
@@ -385,26 +253,27 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4 class="footer-heading">Contact Info</h4>
                     <div class="contact-info">
                         <p>
-                            <img src="images/phone-icon.svg" alt="Phone:" class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
                             <a href="tel:1300SAFENEST" class="contact-link">1300 SAFENEST</a>
                         </p>
                         <p>
-                            <img src="images/email-icon.svg" alt="Email:" class="contact-icon">
-                            <a href="mailto:info@safenestsecurity.com.au" class="contact-link">info@safenestsecurity.com.au</a>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:info@safenestsecurity.com.au"
+                                class="contact-link">info@safenestsecurity.com.au</a>
                         </p>
                         <p>
-                            <img src="images/location-icon.svg" alt="Address:" class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
                             Sydney, Melbourne, Brisbane
                         </p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
                     <p>&copy; 2025 SafeNest Security. All rights reserved.</p>
@@ -420,72 +289,32 @@
 
     <script src="js/script.js"></script>
     <script>
-        // Gallery-specific functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeGalleryFilters();
-            initializeVideoPlayer();
-        });
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalClose = document.getElementById('modalClose');
 
-        function initializeGalleryFilters() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const galleryItems = document.querySelectorAll('.gallery-item');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
 
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const filter = this.getAttribute('data-filter');
-                    
-                    // Update button states
-                    filterButtons.forEach(btn => {
-                        btn.classList.remove('active');
-                        btn.setAttribute('aria-pressed', 'false');
-                    });
-                    this.classList.add('active');
-                    this.setAttribute('aria-pressed', 'true');
-                    
-                    // Filter gallery items
-                    galleryItems.forEach(item => {
-                        const category = item.getAttribute('data-category');
-                        if (filter === 'all' || category === filter) {
-                            item.style.display = 'block';
-                            item.style.opacity = '0';
-                            setTimeout(() => {
-                                item.style.opacity = '1';
-                            }, 100);
-                        } else {
-                            item.style.opacity = '0';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 300);
-                        }
-                    });
-                    
-                    // Announce filter change to screen readers
-                    const visibleCount = document.querySelectorAll(filter === 'all' ? '.gallery-item' : `.gallery-item[data-category="${filter}"]`).length;
-                    announce(`Showing ${visibleCount} ${filter === 'all' ? 'projects' : filter + ' projects'}`);
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                galleryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
                 });
             });
-        }
-
-        function initializeVideoPlayer() {
-            const videoContainer = document.querySelector('.video-container');
-            const video = videoContainer.querySelector('video');
-            const playBtn = videoContainer.querySelector('.video-play-btn');
-
-            if (playBtn && video) {
-                playBtn.addEventListener('click', function() {
-                    video.play();
-                    this.style.display = 'none';
-                });
-
-                video.addEventListener('pause', function() {
-                    playBtn.style.display = 'flex';
-                });
-
-                video.addEventListener('ended', function() {
-                    playBtn.style.display = 'flex';
-                });
-            }
-        }
+        });
     </script>
 </body>
+
 </html>
