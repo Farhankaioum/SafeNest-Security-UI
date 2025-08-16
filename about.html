@@ -1,33 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | SafeNest Security</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SafeNest Security</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-  <header>
-    <div class="logo">SafeNest Security</div>
-    <nav aria-label="Main Navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="resources/images/safenest-logo.png" alt="SafeNest Security Logo" class="logo-img">
+                    <h1 class="logo-text">SafeNest Security</h1>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-menu" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a href="index.html" class="nav-link active" role="menuitem" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="services.html" class="nav-link" role="menuitem">Services</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="media.html" class="nav-link" role="menuitem">Gallery</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="about.html" class="nav-link" role="menuitem">About</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="contact.html" class="nav-link contact-btn" role="menuitem">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <main>
-    <section class="about">
-      <h1>About SafeNest Security</h1>
-      <p>We provide reliable and modern home security solutions including smart locks, CCTV cameras, and safety consultations. Our mission is to keep your family and home safe with cutting-edge technology.</p>
-    </section>
-  </main>
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">About SafeNest Security</h1>
+                <p class="page-subtitle">
+                    Protecting Australian homes with trusted security solutions since 2009
+                </p>
+            </div>
 
-  <footer>
-    <p>&copy; <span id="year"></span> SafeNest Security. All rights reserved.</p>
-  </footer>
-  <script src="js/script.js"></script>
+            <section class="content-section">
+                <h2 class="section-title">Our Story</h2>
+                <div class="content-text">
+                    <p>SafeNest Security was founded with a simple mission: to provide Australian families with peace of
+                        mind through advanced, reliable home security solutions. What started as a small local business
+                        in Sydney has grown into a trusted name across Australia, serving thousands of happy customers
+                        in Sydney, Melbourne, and Brisbane.</p>
+                    <br>
+                    <p>We believe that every home deserves protection, and every family should feel safe and secure.
+                        That's why we've dedicated ourselves to staying at the forefront of security technology,
+                        offering everything from smart locks and surveillance systems to comprehensive security
+                        consultations.</p>
+                </div>
+            </section>
+
+            <section class="stats" aria-labelledby="stats-title">
+                <div class="container">
+                    <h2 id="stats-title" class="sr-only">SafeNest Security Statistics and Achievements</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="5000">0</div>
+                            <div class="stat-label">Homes Protected</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="99">0</div>
+                            <div class="stat-label">% Uptime Guarantee</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="24">0</div>
+                            <div class="stat-label">Hour Monitoring</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="value-title">Security First</h3>
+                        <p class="value-description">We prioritize your safety above all else, using only the highest
+                            quality security equipment and proven installation methods.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="value-title">Customer Focus</h3>
+                        <p class="value-description">Every solution is tailored to your specific needs. We listen,
+                            understand, and deliver exactly what your home requires.</p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <h3 class="value-title">Excellence</h3>
+                        <p class="value-description">From consultation to installation and ongoing support, we maintain
+                            the highest standards of service quality.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Why Choose Us?</h2>
+                <div class="content-text">
+                    <p>Our team of certified security professionals brings years of experience and expertise to every
+                        project. We use only premium equipment from trusted manufacturers, ensuring your investment
+                        stands the test of time. With our 24/7 monitoring service and responsive customer support,
+                        you're never alone when it comes to your home's security.</p>
+                    <br>
+                    <p>We're not just a security company – we're your neighbors, committed to making Australian
+                        communities safer, one home at a time.</p>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta" aria-labelledby="cta-title">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2 id="cta-title" class="cta-title">Ready to Secure Your Home?</h2>
+                        <p class="cta-description">
+                            Get a free security assessment and discover how SafeNest can protect what matters most to
+                            you.
+                        </p>
+                        <a href="contact.html" class="btn btn-primary btn-large">
+                            Schedule Free Consultation
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="resources/images/safenest-logo.png" alt="SafeNest Security Logo"
+                            class="footer-logo-img">
+                        <h3 class="footer-logo-text">SafeNest Security</h3>
+                    </div>
+                    <p class="footer-description">
+                        Protecting Australian homes with advanced security solutions since 2009.
+                    </p>
+                    <div class="social-links" aria-label="Follow us on social media">
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#smart-locks">Smart Locks</a></li>
+                        <li><a href="services.html#surveillance">Surveillance Systems</a></li>
+                        <li><a href="services.html#consultations">Security Consultations</a></li>
+                        <li><a href="services.html#monitoring">24/7 Monitoring</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Our Products</a></li>
+                        <li><a href="media.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="contact-info">
+                        <p>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:1300SAFENEST" class="contact-link">1300 SAFENEST</a>
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:info@safenestsecurity.com.au"
+                                class="contact-link">info@safenestsecurity.com.au</a>
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Sydney, Melbourne, Brisbane
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 SafeNest Security. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#cookies">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
