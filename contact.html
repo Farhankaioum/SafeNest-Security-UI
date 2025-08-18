@@ -248,12 +248,10 @@
             alert('Live chat feature would be integrated with your preferred chat service (e.g., Intercom, Zendesk Chat, etc.)');
         }
 
-        // Enhanced form validation for contact page
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('contactForm');
             const privacyCheckbox = document.getElementById('privacy');
 
-            // Custom validation for privacy checkbox
             if (privacyCheckbox) {
                 privacyCheckbox.addEventListener('change', function () {
                     const errorElement = document.getElementById('privacy-error');

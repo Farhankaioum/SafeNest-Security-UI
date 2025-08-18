@@ -1,10 +1,7 @@
-// SafeNest Security - Main JavaScript File
-
 'use strict';
 
-// DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all components
+    // Initialize
     initializeNavigation();
     initializeAnimations();
     initializeCounters();
@@ -15,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeContactForm();
 });
 
-// Navigation Management
+// Navigation
 function initializeNavigation() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -23,20 +20,17 @@ function initializeNavigation() {
     const header = document.querySelector('.header');
     
     if (navToggle && navMenu) {
-        // Mobile menu toggle
         navToggle.addEventListener('click', function() {
             const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
             
             navToggle.setAttribute('aria-expanded', !isOpen);
             navMenu.classList.toggle('nav-open');
             
-            // Trap focus in mobile menu when open
             if (!isOpen) {
                 navLinks[0]?.focus();
             }
         });
         
-        // Close mobile menu when clicking nav links
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navToggle.setAttribute('aria-expanded', 'false');
@@ -44,7 +38,6 @@ function initializeNavigation() {
             });
         });
         
-        // Close mobile menu when clicking outside
         document.addEventListener('click', function(event) {
             if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
                 navToggle.setAttribute('aria-expanded', 'false');
@@ -52,7 +45,6 @@ function initializeNavigation() {
             }
         });
         
-        // Handle escape key for mobile menu
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape' && navMenu.classList.contains('nav-open')) {
                 navToggle.setAttribute('aria-expanded', 'false');
@@ -62,7 +54,6 @@ function initializeNavigation() {
         });
     }
     
-    // Header scroll effect
     if (header) {
         let lastScrollY = window.scrollY;
         
@@ -77,7 +68,6 @@ function initializeNavigation() {
                 header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
             }
             
-            // Hide/show header on scroll
             if (currentScrollY > lastScrollY && currentScrollY > 500) {
                 header.style.transform = 'translateY(-100%)';
             } else {
@@ -89,9 +79,8 @@ function initializeNavigation() {
     }
 }
 
-// Animation Management
+// Animation
 function initializeAnimations() {
-    // Intersection Observer for fade-in animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -103,7 +92,6 @@ function initializeAnimations() {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
                 
-                // Add stagger animation for grid items
                 if (entry.target.classList.contains('features-grid') || 
                     entry.target.classList.contains('stats-grid')) {
                     const children = entry.target.children;
@@ -120,7 +108,6 @@ function initializeAnimations() {
         });
     }, observerOptions);
     
-    // Observe elements for animation
     const animatedElements = document.querySelectorAll('.feature-card, .stat-item, .cta-content, .section-title');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
@@ -129,7 +116,6 @@ function initializeAnimations() {
         observer.observe(el);
     });
     
-    // Observe grid containers
     const gridContainers = document.querySelectorAll('.features-grid, .stats-grid');
     gridContainers.forEach(grid => {
         const children = grid.children;
@@ -158,7 +144,6 @@ function initializeCounters() {
                 requestAnimationFrame(updateCounter);
             } else {
                 counter.textContent = target;
-                // Add "+" for certain counters
                 if (target === 5000) {
                     counter.textContent = '5,000+';
                 } else if (target === 99) {
@@ -174,7 +159,7 @@ function initializeCounters() {
         updateCounter();
     };
     
-    // Intersection Observer for counters
+    //  Counters
     const counterObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
